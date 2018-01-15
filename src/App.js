@@ -7,6 +7,14 @@ class App extends Component {
   state = {
     fields: {
       name: {
+        type: 'text',
+        value: ''
+      },
+      email: {
+        type: 'email',
+        value: ''
+      },
+      password: {
         type: 'password',
         value: ''
       }
@@ -18,7 +26,6 @@ class App extends Component {
     // This doesn't mutate state. I like it, but why does it work?
     fields[name].value = value
     this.setState({fields})
-    console.log(this.state)
   }
 
   render () {
